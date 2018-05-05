@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+    </head>
+    <body>
+        <a-scene embedded arjs='sourceType: webcam;'>
+            <a-assets>
+                <img src="https://i.imgur.com/mYmmbrp.jpg" id="batu">
+                <a-asset-item id="monas" src="https://raw.githubusercontent.com/dikyarga/belajar-WebAR/master/assets/3ds/monas.obj"></a-asset-item>
+            </a-assets>
+            <a-entity position='0 0.5 0' 
+            obj-model="obj: #monas;" 
+            scale="0.05 0.05 0.05"></a-entity>
+            <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-scene>
+    </body>
+</html>
